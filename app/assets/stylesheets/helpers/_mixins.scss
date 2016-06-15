@@ -1,0 +1,4 @@
+@mixin relative($height) {
+  position: relative;
+  height: $height;
+}

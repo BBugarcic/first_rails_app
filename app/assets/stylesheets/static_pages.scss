@@ -1,3 +1,134 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Candal);
+@import "helpers/mixins.scss";
+@import "helpers/placeholders.scss";
+@import "helpers/variables.scss";
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  body {
+    position: relative;
+    margin: 0;
+    padding-bottom: $sticky_footer_height;
+    min-height: 100%;
+    /* Navbar */
+    .navbar {
+      min-height: 80px !important;
+      background-color: $background_color_nav_foot;
+      @extend %main_font_family;
+    }
+    .navbar-toggle {
+      margin-top: 25px;
+      border-color: $black !important;
+      &:hover, &:focus {
+        background-color: $background_color_nav_foot !important;
+      }
+    }
+    .navbar-collapse {
+      border-color: transparent !important;
+    }
+    .icon-bar {
+      background-color: $black !important;
+    }
+    .navbar-brand {
+      margin-top: 15px;
+      color: $black !important;
+      letter-spacing: 0.3em;
+    }
+    .navbar-nav {
+      margin-top: 20px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .navbar-nav > li > a {
+      color: $black !important;
+      @extend %hover_transition;
+      &:hover {
+        color: $white !important;
+      }
+    }
+    /*Page title*/
+    .page-title {
+      padding-top: 100px;
+      margin-bottom: 30px;
+    }
+    /*separator div*/
+    .separator-wrapper {
+      position: relative;
+      text-align: center;
+    }
+    .separator {
+      margin: 0 auto 1em;
+      width: 20em;
+    }
+    .line-separator {
+      &::before, &::after {
+        display: block;
+        width: 40%;
+        content: " ";
+        margin-top: 14px;
+        border: 1px solid $black;
+      }
+      &::before {
+        float: left;
+      }
+      &::after {
+        float: right;
+      }
+    }
+    .small-bike{
+      font-size: 1.5em;
+    }
+    /*picture on home page*/
+    .main-pic {
+      @extend %main-pic;
+    }
+    /* main container */
+    .row {
+      margin-top: $big_margin;
+      margin-bottom: $big_margin;
+    }
+    .left-column {
+      border-right: $thin_border;
+    }
+    .right-column {
+      border-left: $thin_border;
+    }
+    .contact-points {
+      text-align: center;
+    }
+    /*footer*/
+    footer {
+      background-color: $background_color_nav_foot;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: $sticky_footer_height;
+      text-align: center;
+      padding-top: 10px;
+    }
+  }
+}
+
+/*Typography*/
+h1 {
+  @extend %main_font_family;
+  text-align: center;
+  color: $black;
+}
+
+h2 {
+  @extend %main_font_family;
+  text-align: center;
+}
+
+h3 {
+  @extend %main_font_family;
+  text-align: center;
+  text-transform: uppercase;
+}
