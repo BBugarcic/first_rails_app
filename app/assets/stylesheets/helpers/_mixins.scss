@@ -1,4 +1,8 @@
-@mixin relative($height) {
-  position: relative;
-  height: $height;
+@mixin change_border_on_columns {
+  @media (max-width: $medium_desk_width) {
+    border: none;
+  }
+  @media (max-width: $small_width) {
+    border-bottom: $thin_border;
+  }
 }

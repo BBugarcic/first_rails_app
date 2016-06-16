@@ -1,6 +1,8 @@
+@import "helpers/variables.scss";
+
 %main-pic {
   max-width: 100%;
-  max-height: 500px !important;
+  max-height: 500px;
   margin: 0 auto;
 }
 
@@ -18,4 +20,11 @@
   -o-transition: .5s;
   -ms-transition: .5s;
   transition: .5s;
+}
+
+%hover_change_color_link {
+  @extend %hover_transition;
+  &:hover {
+    color: $white;
+  }
 }
