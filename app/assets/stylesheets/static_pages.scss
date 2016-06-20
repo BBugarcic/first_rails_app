@@ -51,6 +51,7 @@ html {
 .navbar-default .navbar-nav>li>a {
   color: $black;
   @extend %hover_change_color_link;
+  @extend %main_font_family;
 }
 /*Page title*/
 .page-title {
@@ -135,4 +136,9 @@ h3 {
   @extend %main_font_family;
   text-align: center;
   text-transform: uppercase;
+}
+
+h4 {
+  @extend %main_font_family;
+  color: $black;
 }
