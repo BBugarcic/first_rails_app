@@ -28,3 +28,11 @@
     color: $white;
   }
 }
+
+%open_dropdown_background_color {
+  &:focus, &:hover {
+    background-color: $background_color_nav_foot;
+    color: $white;
+  }
+
+}

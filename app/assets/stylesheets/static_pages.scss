@@ -53,6 +53,20 @@ html {
   @extend %hover_change_color_link;
   @extend %main_font_family;
 }
+.navbar-default .dropdown.open>a {
+  @extend %open_dropdown_background_color;
+}
+
+.dropdown-menu {
+  background-color: $background_color_nav_foot;
+  border: none;
+}
+.dropdown-menu>li>a {
+  color: $black;
+  @extend %main_font_family;
+  @extend %open_dropdown_background_color;
+
+}
 /*Page title*/
 .page-title {
   padding-top: 100px;

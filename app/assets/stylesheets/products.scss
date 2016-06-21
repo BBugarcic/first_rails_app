@@ -1,10 +1,56 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Candal);
+@import "helpers/variables.scss";
+@import "helpers/mixins.scss";
+@import "helpers/placeholders.scss";
+
 #notice {
   margin-top: 100px;
 }
 
 .new-project-form {
   text-align: center;
+}
+
+.item {
+  text-align: left;
+}
+
+.product-img-wrapper {
+  text-align: center;
+  max-height: 220px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.product-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.thin-bottom {
+  border-bottom: $thin_border;
+}
+
+.border {
+  border: solid;
+}
+
+.pics {
+  height: 220px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.row.is-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row.is-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
 }
