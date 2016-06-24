@@ -5,6 +5,8 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    @special_offers = Product.limit(5);
+
   end
 
   # GET /products/1

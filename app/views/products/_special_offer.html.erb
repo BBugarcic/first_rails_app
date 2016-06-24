@@ -1,0 +1,6 @@
+<div class="item<%= " active" if special_offer == @special_offers.first %>">
+  <%= image_tag(special_offer.image_url, class: "carusel-pics") %>
+  <div class="carousel-caption">
+    <%= special_offer.name %>
+  </div>
+</div>

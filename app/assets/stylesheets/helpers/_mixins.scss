@@ -6,3 +6,32 @@
     border-bottom: $thin_border;
   }
 }
+
+@mixin hide_on_mobile {
+  @media (max-width: $tablet_width) {
+    display: none;
+  }
+}
+
+@mixin hide_on_tablet_desktop {
+  @media (min-width: $tablet_width) {
+    display: none;
+  }
+}
+
+@mixin flex_special_offer {
+  @media (min-width: $tablet_width) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@mixin borders_special_offer {
+  @media (max-width: $tablet_width) {
+    border: none;
+  }
+  @media (min-width: $tablet_width) {
+    border-top: solid 2px $background_color_nav_foot;
+    border-bottom: solid 2px $background_color_nav_foot;
+  }
+}

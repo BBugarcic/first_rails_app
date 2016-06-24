@@ -2,31 +2,59 @@
 <p id="notice"><%= notice %></p>
 
 <h1 class="page-title">Buy</h1>
-<div class="separator-wrapper">
-    <div class="separator line-separator">
-      <i class="small-bike fa fa-bicycle" aria-hidden="true"></i>
+<!-- separator-->
+<%= render 'shared/separator' %>
+
+<div class="container  mobile_hidden">
+  <div class="row is-flex special-offer-wrapper">
+
+    <%= render "offer_title_wrapper" %>
+
+    <div class="col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <% @special_offers.each do |special_offer| %>
+            <li data-target="#carousel-example-generic" class="<%= "active" if special_offer == @special_offers.first %>"</li>
+          <% end %>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <% @special_offers.each do |special_offer| %>
+            <%= render partial: "special_offer", locals: {special_offer: special_offer} %>
+          <% end %>
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div><!-- /carousel -->
     </div>
+
+    <%= render "offer_title_wrapper" %>
+
+  </div><!-- /special-offer -->
+</div><!-- /container -->
+<div class="container tablet_desktop_hidden">
+  <div class="row special-offer-wrapper">
+    <%= render "offer_title_wrapper" %>
+  </div>
 </div>
+<!-- separator-->
+<%= render "shared/separator" %>
 
 <div class="container">
   <div class="row is-flex">
-    <% @products.each do |product| %>
-      <div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-8 col-xs-offset-2 item">
-        <div class="product-wrapper">
-          <div class="product-img-wrapper">
-            <%= image_tag(product.image_url, class: "pics") %>
-          </div>
-          <h4 class="thin-bottom"><%= product.name %></h4>
-          <p>Description: <%= product.description %><p>
-          <p>Color: <%= product.color %></p>
-          <p>Price: <%= product.price %> &euro;</p>
-          <p><%= link_to 'Edit', edit_product_path(product) %> <%= link_to 'Show', product %></p>
-          <p><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-        </div>
-      </div><!-- /col -->
-    <% end %>
-  </div>
-</div>
+    <!-- renders _product.html.erb for each product -->
+    <%= render @products %>
+    
+  </div> <!-- /row -->
+</div><!-- /container -->
 
 <br>
 
