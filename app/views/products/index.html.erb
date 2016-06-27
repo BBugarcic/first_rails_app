@@ -1,5 +1,7 @@
 
 <p id="notice"><%= notice %></p>
+<!-- link to previous page -->
+<%= render "shared/previous_page" %>
 
 <h1 class="page-title">Buy</h1>
 <!-- separator-->
@@ -52,10 +54,10 @@
   <div class="row is-flex">
     <!-- renders _product.html.erb for each product -->
     <%= render @products %>
-    
+
   </div> <!-- /row -->
 </div><!-- /container -->
-
+<%= render "shared/previous_page" %>
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<%= link_to 'New Product', new_product_path, class: "scaffolded-link" %>

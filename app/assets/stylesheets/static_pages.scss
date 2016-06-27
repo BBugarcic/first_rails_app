@@ -67,9 +67,20 @@ html {
   @extend %open_dropdown_background_color;
 
 }
+/*previous page*/
+
+.scaffolded-link {
+  @extend %main_font_family;
+  color: $black;
+  background-color: $white;
+  text-transform: capitalize;
+  &:hover {
+    @extend %previous_change_background;
+  }
+}
 /*Page title*/
 .page-title {
-  padding-top: 100px;
+  padding-top: 80px;
   margin-bottom: 30px;
 }
 /*separator div*/
@@ -122,6 +133,11 @@ html {
 .contact-points {
   text-align: center;
 }
+/*product*/
+.product-holder {
+  @extend %main_font_family;
+}
+
 /*footer*/
 footer {
   background-color: $background_color_nav_foot;

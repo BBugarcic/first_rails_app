@@ -36,3 +36,9 @@
   }
 
 }
+
+%previous_change_background {
+  @extend %hover_transition;
+  background-color: transparent;
+  color: $black;
+}

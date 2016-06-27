@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'static_pages/repair'
+
+  get 'static_pages/index'
+
   resources :products
   get 'static_pages/about'
 
