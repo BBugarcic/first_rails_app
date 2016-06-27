@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<div class="col-sm-4">
+<div class="col-sm-4 col-sm-offset-4">
+  <p>
+    <%= image_tag(@product.image_url, class: "show-picture") %>
+  </p>
+
   <p>
     <strong>Name:</strong>
     <%= @product.name %>
@@ -9,11 +13,6 @@
   <p>
     <strong>Description:</strong>
     <%= @product.description %>
-  </p>
-
-  <p>
-    <strong>Image url:</strong>
-    <%= @product.image_url %>
   </p>
 
   <p>

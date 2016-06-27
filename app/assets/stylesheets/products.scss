@@ -36,8 +36,6 @@
   }
 }
 
-
-
 .carousel-inner {
   .item {
     height: 250px;
@@ -49,12 +47,14 @@
   }
 }
 
-
-
-.new-project-form {
+.new-project-form,
+.edit-project-form {
   text-align: center;
 }
-
+.show-picture {
+  height: 600px;
+  width: 100%;
+}
 .product-holder {
   text-align: left;
 }
