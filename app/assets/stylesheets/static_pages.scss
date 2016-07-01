@@ -182,7 +182,13 @@ html {
   border-left: $thin_border;
   @include change_border_on_columns;
 }
-.contact-points {
+.panel-default {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.panel-body {
   text-align: center;
 }
 /*product*/
