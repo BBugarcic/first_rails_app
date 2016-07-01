@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  resources :user_offers
+  
   get 'static_pages/repair'
 
   get 'static_pages/index'

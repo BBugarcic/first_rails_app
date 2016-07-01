@@ -1,0 +1,23 @@
+<h1 class="page-title">User Offers</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th colspan="2"></th>
+  </tr>
+
+  <% @user_offer.each do |user_offer| %>
+    <tr>
+      <td><%= user_offer.name %></td>
+      <td><%= user_offer.category %></td>
+      <td><%= user_offer.description %></td>
+      <td><%= user_offer.color %></td>
+      <td><%= user_offer.color %></td>
+      <td><%= link_to 'Show', user_offer_path(user_offer) %></td>
+      <td><%= link_to 'Edit', edit_user_offer_path(user_offer) %></td>
+      <td><%= link_to 'Destroy', user_offer_path(user_offer),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

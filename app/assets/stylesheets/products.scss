@@ -11,14 +11,6 @@
   margin-top: 100px;
 }
 
-.mobile_hidden {
-  @include hide_on_mobile;
-}
-
-.tablet_desktop_hidden {
-  @include hide_on_tablet_desktop;
-}
-
 .special-offer-wrapper {
   width: 80%;
   @extend %center_auto_margin;
@@ -47,8 +39,12 @@
   }
 }
 
-.new-project-form,
-.edit-project-form {
+.btn.btn-default.close-offer {
+  margin: 0 auto;
+}
+
+.new-form,
+.edit-project-form, {
   text-align: center;
 }
 .show-picture {

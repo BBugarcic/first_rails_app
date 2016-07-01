@@ -67,17 +67,69 @@ html {
   @extend %open_dropdown_background_color;
 
 }
+
+#notice {
+  margin-top: 80px;
+}
+/* search */
+.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+.search-and-previous-page-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  @media (max-width: $tablet_width) {
+    justify-content: flex-start;
+  }
+  @media (min-width: $tablet_width) {
+    justify-content: space-around;
+  }
+
+}
+.navbar-default .navbar-nav>li>form {
+  padding-top: 10px;
+  color: $black;
+  @extend %main_font_family;
+}
+
+
+.mobile-hidden {
+  @include hide_on_mobile;
+}
+
+.tablet-desktop-hidden {
+  @include hide_on_tablet_desktop;
+}
+
+.nav>li.tablet-desktop-hidden {
+  @include hide_on_tablet_desktop;
+}
+
+.search-tablet-desktop {
+  display: inline-block;
+
+}
+
 /*previous page*/
+.previous-page {
+  display: inline-block;
+}
 
 .scaffolded-link {
   @extend %main_font_family;
-  color: $black;
-  background-color: $white;
+  color: #333;
   text-transform: capitalize;
   &:hover {
     @extend %previous_change_background;
   }
 }
+
 /*Page title*/
 .page-title {
   padding-top: 80px;
