@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  post 'static_pages/thank_you'
+
+  post 'messages/thank_you'
+
+  get 'messages/new'
+
+  #post 'static_pages/thank_you'
 
   resources :user_offers
 

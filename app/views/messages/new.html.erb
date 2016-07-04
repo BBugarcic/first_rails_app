@@ -1,0 +1,47 @@
+<section class="page-title">
+  <h1>Contact</h1>
+</section>
+
+<%= render "shared/separator" %>
+
+<%= form_for @message, url: {action: "thank_you"}, :html => {:class => "form-horizontal col-xs-12"} do |f| %>
+
+  <% if @message.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@message.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @message.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group text-center">
+    <%= f.label :name, class: "control-label col-sm-2" %>
+    <div class="col-sm-8">
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group text-center">
+    <%= f.label :email, class: "control-label col-sm-2" %>
+    <div class="col-sm-8">
+      <%= f.text_field :email, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group text-center">
+    <%= f.label :message, class: "control-label col-sm-2" %>
+    <div class="col-sm-8">
+      <%= f.text_area :content, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class= text-center>
+    <%= f.submit "Submit", class: "btn btn-default" %>
+  </div>
+<% end %>
