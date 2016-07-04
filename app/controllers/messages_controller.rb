@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
       @surname = @message.surname
       @email = @message.email
       @content = @message.content
-      MassageMailer.contact_form(@email, @name, @surname, @content).deliver_now
+      MessageMailer.contact_form(@email, @name, @surname, @content).deliver_now
     else
       render "new"
     end

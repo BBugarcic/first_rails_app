@@ -1,4 +1,4 @@
-class MassageMailer < ApplicationMailer
+class MessageMailer < ApplicationMailer
   default from: "2bjswebdev@gmail.com"
 
   def contact_form(email, name, surname, content)
