@@ -8,9 +8,10 @@ class MessagesController < ApplicationController
 
     if @message.save
       @name = @message.name
+      @surname = @message.surname
       @email = @message.email
       @content = @message.content
-      MassageMailer.contact_form(@email, @name, @content).deliver_now
+      MassageMailer.contact_form(@email, @name, @surname, @content).deliver_now
     else
       render "new"
     end
@@ -18,7 +19,7 @@ class MessagesController < ApplicationController
 
 private
   def message_params
-     params.require(:message).permit(:name, :email, :content)
+     params.require(:message).permit(:name, :surname, :email, :content)
    end
 
 end
