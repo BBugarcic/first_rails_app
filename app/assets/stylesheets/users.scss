@@ -1,0 +1,72 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Candal);
+@import "helpers/variables.scss";
+@import "helpers/mixins.scss";
+@import "helpers/placeholders.scss";
+
+.signin-bg {
+  background-image: url("http://res.cloudinary.com/dnkyfvpgn/image/upload/c_scale,h_1080,w_1290/v1467736553/bike-1031345_1920_hneui6.jpg");
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.signin-title {
+  padding-top: 50px;
+}
+
+.signin-wrapper {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 70%;
+  margin: 0 auto;
+  background-color: $white;
+  opacity: 0.9;
+  border-radius: 10px;
+}
+
+@media (min-width: $tablet_width){
+  .signin-wrapper {
+    width: 50%;
+  }
+}
+
+input[type="email"]
+input[type="password"] {
+  width: 100%;
+}
+
+input[type="password"] {
+  margin-bottom: 10px;
+}
+
+label {
+  @extend %main_font_family;
+  letter-spacing: 0.2em;
+}
+
+.btn.btn-lg.btn-block {
+  border: $thin_border;
+  background-color: $white;
+  color: $black;
+  @extend %main_font_family;
+}
+
+.form-control:focus {
+  border-color:#C16666;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(193,102,102,.6);
+}
+
+.devise-shared {
+    padding-bottom: 30px;
+}
+
+.devise-shared > a{
+  margin-left: 30px;
+
+}

@@ -52,3 +52,6 @@ group :production do
   gem 'rails_12factor'
   gem 'pg'
 end
+
+# Devise gem for authentication
+gem 'devise'

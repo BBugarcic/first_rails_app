@@ -1,20 +1,7 @@
-/*$(document).ready(function() {
-  var scrollCurrent = 0;
-  $(document).scroll(function() {
-    scrollCurrent = $(this).scrollTop();
-    if(scrollCurrent > 80) {
-      $(".bg-color-change").css("background-color", "#a6a6a6" );
-    } else {
-      $(".bg-color-change").css("background-color", "#FFFFFF" );
-    }
-  });
-
-});*/
-
 var tStart = 100 // Start transition 100px from top
   , tEnd = 500   // End at 500px
-  , cStart = [255, 255, 255]  // Gold
-  , cEnd = [139, 139, 139]   // Lime
+  , cStart = [255, 255, 255]  // white
+  , cEnd = [139, 139, 139]   // gray
   , cDiff = [cEnd[0] - cStart[0], cEnd[1] - cStart[1], cEnd[1] - cStart[0]];
 
 $(document).ready(function(){

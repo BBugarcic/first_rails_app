@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
   </head>
-  <body>
+  <body class="<% if controller.controller_name == "sessions" && controller.action_name == "new"%>signin-bg<%end%>">
 
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
@@ -38,16 +38,24 @@
                 <li><%= link_to "buy", products_path %></li>
                 <li><%= link_to "sell", new_user_offer_path %></li>
                 <li><%= link_to "repair", static_pages_repair_path %></li>
+                <li><a href="#">special offer</a></li>
               </ul>
             </li>
-            <li><a href="#">special offer</a></li>
             <li><%= link_to "contact", messages_new_path %></li>
+            <li>
+              <%if user_signed_in? %>
+                <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
+              <% else %>
+                <%= link_to("Login", new_user_session_path) %>
+              <% end %>
+            </li>
           </ul>
         </div><!-- end collapse navbar-collapse -->
       </div><!-- end container-fluid -->
     </nav> <!-- end navbar-->
 
     <%= yield %>
+
 
     <footer>
       <h4>&copy; 2015 Bike Berlin</h4>

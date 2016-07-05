@@ -1,5 +1,6 @@
 class UserOffersController < ApplicationController
-
+  before_filter :authenticate_user!
+  
   def index
     @user_offer = UserOffer.all
   end
