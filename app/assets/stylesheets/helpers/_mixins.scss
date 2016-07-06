@@ -12,7 +12,11 @@
     display: none;
   }
 }
-
+@mixin hide_on_mobile_tablet_sm_desktop {
+  @media (max-width: $large_desk_width) {
+    display: none;
+  }
+}
 @mixin hide_on_tablet_desktop {
   @media (min-width: $tablet_width) {
     display: none;

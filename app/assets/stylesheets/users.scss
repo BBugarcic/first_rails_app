@@ -7,12 +7,24 @@
 @import "helpers/mixins.scss";
 @import "helpers/placeholders.scss";
 
-.signin-bg {
+.bg {
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+  @media (min-height: 669px) {
+    position: absolute;
+  }
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding-bottom:
+   $sticky_footer_height;
   background-image: url("http://res.cloudinary.com/dnkyfvpgn/image/upload/c_scale,h_1080,w_1290/v1467736553/bike-1031345_1920_hneui6.jpg");
   background-attachment:fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 
 .signin-wrapper {
   margin-left: auto;

@@ -7,14 +7,13 @@
 html {
   height: 100%;
   box-sizing: border-box;
-  body {
-    position: relative;
-    margin: 0;
-    padding-bottom:
-     $sticky_footer_height;
-    min-height: 100%;
-      overflow: scroll;
-  }
+}
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom:
+   $sticky_footer_height;
+  min-height: 100%;
 }
 /* Navbar */
 .navbar {
@@ -91,7 +90,6 @@ html {
   @media (min-width: $tablet_width) {
     justify-content: space-around;
   }
-
 }
 
 .navbar-default .navbar-nav>li>form {
@@ -102,6 +100,9 @@ html {
 
 .mobile-hidden {
   @include hide_on_mobile;
+}
+.mobile-tablet-hidden {
+  @include hide_on_mobile_tablet_sm_desktop;
 }
 
 .tablet-desktop-hidden {
@@ -114,7 +115,6 @@ html {
 
 .search-tablet-desktop {
   display: inline-block;
-
 }
 
 /*previous page*/
