@@ -35,3 +35,9 @@
     border-bottom: solid 2px $background_color_nav_foot;
   }
 }
+
+@mixin hide_separator {
+  @media(max-width: $small_width) {
+    display: none;
+  }
+}

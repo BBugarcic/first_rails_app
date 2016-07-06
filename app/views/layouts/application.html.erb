@@ -11,7 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
   </head>
-  <body class="<% if controller.controller_name == "sessions" && controller.action_name == "new"%>signin-bg<%end%>">
+  <body class="
+  <% if (controller.controller_name == "sessions" &&
+  controller.action_name == "new") || (controller.controller_name == "registrations" &&
+  controller.action_name == "new")
+  %>signin-bg<%end%>">
 
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">

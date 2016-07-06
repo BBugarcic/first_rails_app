@@ -14,17 +14,11 @@
   background-size: cover;
 }
 
-.signin-title {
-  padding-top: 50px;
-}
-
 .signin-wrapper {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
   width: 70%;
-  margin: 0 auto;
   background-color: $white;
   opacity: 0.9;
   border-radius: 10px;
@@ -34,6 +28,15 @@
   .signin-wrapper {
     width: 50%;
   }
+}
+.row.no-margin {
+  margin: 0;
+}
+.signin-title {
+  padding-top: 10px;
+}
+.hide-separator-on-small {
+  @include hide_separator;
 }
 
 input[type="email"]
