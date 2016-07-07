@@ -22,4 +22,8 @@ class ApplicationController < ActionController::Base
     new_user_session_path
   end
 
+  rescue_from CanCan::AccessDenied do |exeption|
+    redirect_to main_app.products_path, :alert => exeption.message
+  end
+
 end

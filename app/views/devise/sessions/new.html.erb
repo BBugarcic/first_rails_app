@@ -4,9 +4,7 @@
     <div class="hide-separator-on-small">
       <%= render "shared/separator" %>
     </div>
-    <div class="notice-wrapper text-center">
-      <p class="notice alert"><%= notice %> <%= alert %></p>
-    </div>
+    <%= render "shared/alert" %>
     <div class="row no-margin">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0"})  do |f| %>
       <div class="col-xs-12">

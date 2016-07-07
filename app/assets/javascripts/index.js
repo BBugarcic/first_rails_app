@@ -16,4 +16,6 @@ $(document).ready(function(){
       console.log('click');
       $(".fade-out").fadeOut();
     });
+
+    $(".alert").fadeOut(4000);
 });

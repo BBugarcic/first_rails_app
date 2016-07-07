@@ -7,6 +7,9 @@
 @import "helpers/mixins.scss";
 @import "helpers/placeholders.scss";
 
+.page-title.title-down {
+  padding-top: 100px;
+}
 .special-offer-wrapper {
   width: 80%;
   @extend %center_auto_margin;

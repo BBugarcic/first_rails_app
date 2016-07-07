@@ -1,6 +1,5 @@
-class OrdersConroller < ApplicationController
-  before_filter :authenticate_user!
-  
+class OrdersController < ApplicationController
+
   def index
   end
 
@@ -15,4 +14,5 @@ class OrdersConroller < ApplicationController
 
   def destroy
   end
+
 end

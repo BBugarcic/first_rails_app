@@ -68,12 +68,10 @@ body {
   @extend %open_dropdown_background_color;
 }
 
-#notice {
-  margin-top: 80px;
-}
 /* search */
 .fixed {
   position: fixed;
+  top: 80px;
   width: 100%;
   z-index: 1000;
   padding-top: 5px;
@@ -162,6 +160,13 @@ body {
 }
 .small-bike{
  font-size: 1.5em;
+}
+
+.alert {
+  width: 40%;
+  display: block-inline;
+  padding: 10px;
+  margin: 0 auto 10px auto;
 }
 
 /*footer*/
