@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   #post 'static_pages/thank_you'
 
-  resources :user_offers
+  #resources :user_offers
 
   get 'static_pages/repair'
 
