@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
+
+  authenticate :user do
+    resources :products, only: [:new, :create, :edit, :destroy]
+  end
+
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+
   resources :users
 
   post 'messages/thank_you'
@@ -15,7 +21,8 @@ Rails.application.routes.draw do
 
   get 'static_pages/index'
 
-  resources :products
+  resources :products, only: [:index, :update, :show]
+
   get 'static_pages/about'
 
   get 'static_pages/contact'

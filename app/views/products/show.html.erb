@@ -24,8 +24,6 @@
     <strong>Price:</strong>
     <%= @product.price %>
   </p>
-
+  <%= link_to 'Edit', edit_product_path(@product), class: "scaffolded-link" %> |
+  <%= link_to 'Back', products_path, class: "scaffolded-link" %>
 </div>
-
-<%= link_to 'Edit', edit_product_path(@product), class: "scaffolded-link" %> |
-<%= link_to 'Back', products_path, class: "scaffolded-link" %>
