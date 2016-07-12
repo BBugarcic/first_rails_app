@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 @import url(https://fonts.googleapis.com/css?family=Candal);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 @import "helpers/variables.scss";
 @import "helpers/mixins.scss";
 @import "helpers/placeholders.scss";
@@ -46,12 +47,27 @@
 .edit-project-form, {
   text-align: center;
 }
+.show-wrapper {
+  padding-top: 80px;
+  letter-spacing: 0.1em;
+  font-family: 'Roboto Slab', serif;
+}
+.show-wrapper p {
+  line-height: 2em;
+}
 .show-picture {
-  height: 600px;
+  height: 400px;
   width: 100%;
+}
+.show-title {
+  text-align: left;
+  border-bottom: $thin_border;
 }
 .product-holder {
   text-align: left;
+  p {
+    font-family: 'Roboto Slab', serif;
+  }
 }
 
 .product-wrapper {
