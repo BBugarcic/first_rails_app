@@ -134,11 +134,19 @@ body {
   padding-top: 80px;
   margin-bottom: 30px;
 }
+.center-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
 /*separator div*/
 .separator-wrapper {
   position: relative;
   text-align: center;
 }
+
 .separator {
   margin: 0 auto 1em;
   width: 20em;
@@ -146,7 +154,7 @@ body {
 .line-separator {
   &::before, &::after {
     display: block;
-    width: 40%;
+    width: 35%;
     content: " ";
     margin-top: 14px;
     border: 1px solid $black;

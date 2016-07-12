@@ -1,3 +1,14 @@
 // Place all the styles related to the Messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Candal);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+@import "helpers/variables.scss";
+@import "helpers/mixins.scss";
+@import "helpers/placeholders.scss";
+
+.contact-title-bg {
+  background-image: url("https://res.cloudinary.com/dnkyfvpgn/image/upload/v1468358693/adventure-925049_1920_lm9adg.jpg");
+  @extend %title-bg;
+}

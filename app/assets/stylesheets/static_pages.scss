@@ -11,7 +11,6 @@
 .main-pic {
   @extend %main-pic;
 }
-
 .row {
   margin-top: $big_margin;
   margin-bottom: $big_margin;
@@ -37,6 +36,43 @@
   text-align: center;
 }
 
+.about-title-bg {
+  background-image: url("http://res.cloudinary.com/dnkyfvpgn/image/upload/c_scale,h_1080,w_1920/v1468330875/white-737190_1920_ifziax.jpg");
+  @extend %title-bg;
+}
+
+.page-title-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: -webkit-linear-gradient(top,rgba(255,255,255,0.75),rgba(255,255,255,0.2));
+  background: -moz-linear-gradient(top, rgba(255,255,255,0.75), rgba(255,255,255,0.2));
+  background: linear-gradient(top, rgba(255,255,255,0.75), rgba(255,255,255,0.2));
+}
+.about-text {
+  text-align: justify;
+  p {
+    margin:5px;
+  }
+}
+.shop-pic {
+  height: 250px;
+  width: 100%;
+  margin: 0 auto;
+}
+.transparent-cover {
+  background-color: $white;
+  opacity: 0.7;
+  width: 100%;
+  min-height: 100%;
+}
+.greeting {
+  text-align: left;
+}
+.greeting-left {
+  text-align: right;
+}
 /*Typography*/
 h1 {
   @extend %main_font_family;
@@ -58,4 +94,13 @@ h3 {
 h4 {
   @extend %main_font_family;
   color: $black;
+}
+
+.greeting,
+.greeting-left {
+  @extend %main_font_family;
+  border-bottom: $thin_border;
+}
+.about-text {
+  font-family: 'Roboto Slab', serif;
 }

@@ -19,12 +19,21 @@
   right: 0;
   padding-bottom:
    $sticky_footer_height;
-  background-image: url("http://res.cloudinary.com/dnkyfvpgn/image/upload/c_scale,h_1080,w_1290/v1467736553/bike-1031345_1920_hneui6.jpg");
+  background-image: url("http://res.cloudinary.com/dnkyfvpgn/image/upload/c_scale,h_1080,w_1920/v1468330875/white-737190_1920_ifziax.jpg");
   background-attachment:fixed;
+  backgroung-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.bg-cover {
+  height: 100%;
+  width: 100%;
+
+  background: -webkit-linear-gradient(top,rgba(255,255,255,0.75),rgba(255,255,255,0.2));
+  background: -moz-linear-gradient(top, rgba(255,255,255,0.75), rgba(255,255,255,0.2));
+  background: linear-gradient(top, rgba(255,255,255,0.75), rgba(255,255,255,0.2));
+}
 
 .signin-wrapper {
   margin-left: auto;

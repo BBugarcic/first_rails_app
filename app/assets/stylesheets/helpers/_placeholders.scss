@@ -42,3 +42,12 @@
   background-color: transparent;
   color: $black;
 }
+
+%title-bg {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  margin-top: 80px;
+}
