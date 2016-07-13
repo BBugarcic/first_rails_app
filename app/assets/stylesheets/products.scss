@@ -63,6 +63,10 @@
   text-align: left;
   border-bottom: $thin_border;
 }
+.product-reviews {
+  width: 90%;
+  margin: 0 auto;
+}
 .product-holder {
   text-align: left;
   p {
@@ -86,6 +90,9 @@
   border-bottom: $thin_border;
 }
 
+.comment {
+  margin: 5px;
+}
 .border {
   border: solid;
 }

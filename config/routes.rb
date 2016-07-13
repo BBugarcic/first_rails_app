@@ -21,7 +21,9 @@ Rails.application.routes.draw do
 
   get 'static_pages/index'
 
-  resources :products, only: [:index, :update, :show]
+  resources :products, only: [:index, :update, :show] do
+    resources :comments
+  end
 
   get 'static_pages/about'
 
