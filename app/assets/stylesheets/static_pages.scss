@@ -41,6 +41,41 @@
   @extend %title-bg;
 }
 
+.index-bg {
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding-bottom:
+   $sticky_footer_height;
+  background-image: url("bike1.jpg");
+  background-attachment:fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.index-bg-cover {
+  height: 100%;
+  width: 100%;
+  background: -webkit-linear-gradient(top,rgba(255,255,255,0.75),rgba(255,255,255,0.2));
+  background: -moz-linear-gradient(top, rgba(255,255,255,0.75), rgba(255,255,255,0.2));
+  background: linear-gradient(top, rgba(255,255,255,0.75), rgba(255,255,255,0.2));
+}
+
+.index-mobile-bg  {
+  margin-top: 80px;
+  position: relative;
+  height: 300px;
+  width: 100%;
+  background-image: url("bike1.jpg");
+  background-attachment:fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .page-title-wrapper {
   position: relative;
   height: 100%;
@@ -83,12 +118,14 @@ h1 {
 h2 {
   @extend %main_font_family;
   text-align: center;
+  color: $black;
 }
 
 h3 {
   @extend %main_font_family;
   text-align: center;
   text-transform: uppercase;
+  color: $black;
 }
 
 h4 {

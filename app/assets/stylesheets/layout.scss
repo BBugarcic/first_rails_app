@@ -107,6 +107,9 @@ body {
   @include hide_on_tablet_desktop;
 }
 
+.desktop-hidden {
+  @include hide_on_desktop;
+}
 .nav>li.tablet-desktop-hidden {
   @include hide_on_tablet_desktop;
 }

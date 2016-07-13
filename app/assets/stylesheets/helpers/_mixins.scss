@@ -8,7 +8,7 @@
 }
 
 @mixin hide_on_mobile {
-  @media (max-width: $tablet_width) {
+  @media (max-width: $tablet_width - 1) {
     display: none;
   }
 }
@@ -22,7 +22,11 @@
     display: none;
   }
 }
-
+@mixin hide_on_desktop {
+  @media (min-width: $large_desk_width + 1) {
+    display: none;
+  }
+}
 @mixin flex_special_offer {
   @media (min-width: $tablet_width) {
     display: flex;

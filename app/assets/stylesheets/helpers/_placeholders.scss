@@ -34,7 +34,6 @@
     background-color: $background_color_nav_foot;
     color: $white;
   }
-
 }
 
 %previous_change_background {
@@ -43,11 +42,15 @@
   color: $black;
 }
 
-%title-bg {
+%index-bg {
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+%title-bg {
   height: 300px;
   margin-top: 80px;
+  @extend %index-bg;
 }

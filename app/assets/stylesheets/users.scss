@@ -29,10 +29,11 @@
 .bg-cover {
   height: 100%;
   width: 100%;
-
-  background: -webkit-linear-gradient(top,rgba(255,255,255,0.75),rgba(255,255,255,0.2));
-  background: -moz-linear-gradient(top, rgba(255,255,255,0.75), rgba(255,255,255,0.2));
-  background: linear-gradient(top, rgba(255,255,255,0.75), rgba(255,255,255,0.2));
+  @media (min-height: 669px) {
+    background: -webkit-linear-gradient(top,rgba(255,255,255,0.75),rgba(255,255,255,0.2));
+    background: -moz-linear-gradient(top, rgba(255,255,255,0.75), rgba(255,255,255,0.2));
+    background: linear-gradient(top, rgba(255,255,255,0.75), rgba(255,255,255,0.2));
+  }
 }
 
 .signin-wrapper {
