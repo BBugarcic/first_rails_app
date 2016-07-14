@@ -30,6 +30,11 @@ gem 'devise'
 # Authorization library
 gem 'cancancan'
 
+# Gem file for pagination
+gem 'will_paginate', '~> 3.1.0'
+
+# Valid Url rails url validator
+gem 'valid_url'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

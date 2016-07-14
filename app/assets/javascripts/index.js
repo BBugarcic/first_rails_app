@@ -17,7 +17,11 @@ $(document).on('ready page:load', function(){
       $(".fade-out").fadeOut();
     });
 
-    $(".alert").fadeOut(4000);
+    if (!$("#error_explanation").hasClass("alert")) {
+      $("#error_explanation").addClass("alert alert-danger");
+      $("#error_explanation h2").css("display", "none");
+      //$("#error_explanation ul").css("list-style", "none");
+    }
 
     $(".rating").raty( { path: "/assets", scoreName: "comment[rating]" });
     $(".rated").raty({ path: "/assets",
@@ -26,4 +30,6 @@ $(document).on('ready page:load', function(){
         return $(this).attr("data-score");
       }
     });
+
+        $(".alert").fadeOut(8000);
 });

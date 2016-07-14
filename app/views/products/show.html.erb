@@ -23,11 +23,13 @@
   <div class="row">
     <div class="col-xs-12">
       <%= render "new_comment" %>
+      <%= render "shared/alert" %>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-12">
       <%= render "comments" %>
+      <%= will_paginate @comments %>
     </div>
   </div>
 </div>

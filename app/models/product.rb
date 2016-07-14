@@ -1,4 +1,8 @@
 class Product < ActiveRecord::Base
+  validates :name, :description, :image_url, :color, presence: true
+  validates :description, length: { in: 4..150 }
+  validates :price, numericality: { only_integer: true, message: "must be a number" }
+  validates :image_url, :url => true
   belongs_to :user
   has_many :orders
   has_many :comments
