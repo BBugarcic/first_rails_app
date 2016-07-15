@@ -33,5 +33,10 @@ class Ability
     alias_action :create, :read, :update, :destroy, :to => :crud
     can :manage, User, id: user.id
     can :crud, Order, :user_id => user.id
+
+    if user.admin?
+      can :read, Product
+    end
+
   end
 end
