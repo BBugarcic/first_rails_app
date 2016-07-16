@@ -8,6 +8,6 @@
     <p>Color: <%= product.color %></p>
     <p>Price: <%= product.price %> &euro;</p>
     <p class="scaffolded-link"><%#= link_to 'Edit', edit_product_path(product), class: "scaffolded-link white" %> <%= link_to 'Show', product, class: "scaffolded-link white" %></p>
-    <!--<p ><%#= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "scaffolded-link white" %></p>-->
+    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "scaffolded-link white" %></p>
   </div>
 </div><!-- /col -->

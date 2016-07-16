@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'products/not_public_products'
+
+  get 'products/user_products'
 
   authenticate :user do
     resources :products, only: [:new, :create, :edit, :destroy]
@@ -14,8 +17,6 @@ Rails.application.routes.draw do
   get 'messages/new'
 
   #post 'static_pages/thank_you'
-
-  #resources :user_offers
 
   get 'static_pages/repair'
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160715090956) do
+ActiveRecord::Schema.define(version: 20160716175313) do
 
   create_table "comments", force: :cascade do |t|
     t.integer  "user_id"
@@ -47,11 +47,15 @@ ActiveRecord::Schema.define(version: 20160715090956) do
     t.string   "name"
     t.text     "description"
     t.string   "image_url"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "color"
     t.float    "price"
+    t.integer  "user_id"
+    t.boolean  "public",      default: false, null: false
   end
+
+  add_index "products", ["user_id"], name: "index_products_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"

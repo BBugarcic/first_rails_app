@@ -16,7 +16,9 @@
       <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
       <p><strong>Price:</strong>
         <%= @product.price %> &euro;</p>
-        <%= link_to 'Edit', edit_product_path(@product), class: "scaffolded-link" %> |
+        <% if @product.user_id == current_user.id %>
+          <%= link_to 'Edit', edit_product_path(@product), class: "scaffolded-link" %> |
+        <% end %>
         <%= link_to 'Back', products_path, class: "scaffolded-link" %>
     </div>
   </div>

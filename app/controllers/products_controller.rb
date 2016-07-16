@@ -4,7 +4,6 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    #@products = Product.all
 
     if params[:q]
       search_term = params[:q]
@@ -15,7 +14,11 @@ class ProductsController < ApplicationController
         @products = Product.where("name LIKE ?", "%#{search_term}%")
       end
     else
-      @products = Product.all
+      if Rails.env == "production"
+        @products = Product.where("public ilike ?", true)
+      else
+        @products = Product.where("public LIKE ?", true)
+      end
     end
 
     @special_offers = Product.limit(5);
@@ -40,7 +43,7 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-
+    @product.user_id = current_user.id
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
@@ -76,6 +79,23 @@ class ProductsController < ApplicationController
     end
   end
 
+  def user_products
+    if Rails.env == "production"
+      @products  = Product.where("user_id ilike ?", "#{current_user.id}")
+    else
+      @products  = Product.where("user_id LIKE ?", "#{current_user.id}")
+    end
+  end
+
+  def not_public_products
+    if Rails.env == "production"
+      @products = Product.where("public ilike ?", false)
+    else
+      @products = Product.where("public LIKE ?", false)
+    end
+  end
+
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
@@ -84,6 +104,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description, :image_url, :color, :price)
+      params.require(:product).permit(:name, :description, :image_url, :color, :price, :user_id, :public)
     end
 end
