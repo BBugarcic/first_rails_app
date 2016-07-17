@@ -14,11 +14,7 @@ class ProductsController < ApplicationController
         @products = Product.where("name LIKE ?", "%#{search_term}%")
       end
     else
-      #if Rails.env == "production"
-      #  @products = Product.where("public ilike ?", true)
-      #else
         @products = Product.where("public = true")
-      #end
     end
 
     @special_offers = Product.limit(5);
@@ -84,7 +80,7 @@ class ProductsController < ApplicationController
       if (!current_user.admin?)
         @products  = Product.where("user_id ilike ?", "#{current_user.id}")
       else
-        @products = Product.where("admin ilike ?", false)
+        @products = Product.where("admin = false")
       end
     else
       if (!current_user.admin?)
@@ -101,9 +97,9 @@ class ProductsController < ApplicationController
 
   def not_public_offers
     if Rails.env == "production"
-      @products = Product.where("public ilike ?", false)
+      @products = Product.where("public = false")
     else
-      @products = Product.where("public LIKE ?", false)
+      @products = Product.where("public = false")
     end
   end
 
