@@ -78,7 +78,7 @@ class ProductsController < ApplicationController
   def user_offers
     if Rails.env == "production"
       if (!current_user.admin?)
-        @products  = Product.where("user_id ilike ?", "#{current_user.id}")
+        @products  = Product.where("user_id = #{current_user.id}")
       else
         @products = Product.joins(:user).where("admin = 'f'")
       end
