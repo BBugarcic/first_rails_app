@@ -81,7 +81,6 @@ class ProductsController < ApplicationController
       else
         @products = Product.joins(:user).where("admin = 'f'")
       end
-    end
   end
 
   def our_offers
@@ -89,7 +88,7 @@ class ProductsController < ApplicationController
   end
 
   def not_public_offers
-      @products = Product.where("public = false")
+      @products = Product.where("public = 'f'")
   end
 
   private
