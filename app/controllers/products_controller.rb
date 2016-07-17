@@ -14,11 +14,11 @@ class ProductsController < ApplicationController
         @products = Product.where("name LIKE ?", "%#{search_term}%")
       end
     else
-      if Rails.env == "production"
-        @products = Product.where("public ilike ?", true)
-      else
-        @products = Product.where("public LIKE ?", true)
-      end
+      #if Rails.env == "production"
+      #  @products = Product.where("public ilike ?", true)
+      #else
+        @products = Product.where("public = true")
+      #end
     end
 
     @special_offers = Product.limit(5);
