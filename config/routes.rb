@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'products/not_public_products'
+  get 'products/our_offers'
 
-  get 'products/user_products'
+  get 'products/not_public_offers'
+
+  get 'products/user_offers'
 
   authenticate :user do
     resources :products, only: [:new, :create, :edit, :destroy]

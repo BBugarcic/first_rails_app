@@ -79,15 +79,27 @@ class ProductsController < ApplicationController
     end
   end
 
-  def user_products
+  def user_offers
     if Rails.env == "production"
-      @products  = Product.where("user_id ilike ?", "#{current_user.id}")
+      if (!current_user.admin?)
+        @products  = Product.where("user_id ilike ?", "#{current_user.id}")
+      else
+        @products = Product.where("admin ilike ?", false)
+      end
     else
-      @products  = Product.where("user_id LIKE ?", "#{current_user.id}")
+      if (!current_user.admin?)
+        @products  = Product.where("user_id LIKE ?", "#{current_user.id}")
+      else
+        @products = Product.joins(:user).where("admin = 'f'")
+      end
     end
   end
 
-  def not_public_products
+  def our_offers
+    @products = Product.joins(:user).where("admin = 't'")
+  end
+
+  def not_public_offers
     if Rails.env == "production"
       @products = Product.where("public ilike ?", false)
     else
@@ -95,7 +107,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
