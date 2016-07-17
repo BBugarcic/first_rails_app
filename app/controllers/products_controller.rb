@@ -90,7 +90,6 @@ class ProductsController < ApplicationController
 
   def not_public_offers
       @products = Product.where("public = false")
-    end
   end
 
   private
