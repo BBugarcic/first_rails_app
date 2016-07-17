@@ -80,7 +80,7 @@ class ProductsController < ApplicationController
       if (!current_user.admin?)
         @products  = Product.where("user_id ilike ?", "#{current_user.id}")
       else
-        @products = Product.where("admin = false")
+        @products = Product.joins(:user).where("admin = 'f'")
       end
     else
       if (!current_user.admin?)
