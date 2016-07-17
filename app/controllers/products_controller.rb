@@ -76,15 +76,8 @@ class ProductsController < ApplicationController
   end
 
   def user_offers
-    if Rails.env == "production"
       if (!current_user.admin?)
         @products  = Product.where("user_id = #{current_user.id}")
-      else
-        @products = Product.joins(:user).where("admin = 'f'")
-      end
-    else
-      if (!current_user.admin?)
-        @products  = Product.where("user_id LIKE ?", "#{current_user.id}")
       else
         @products = Product.joins(:user).where("admin = 'f'")
       end
@@ -96,9 +89,6 @@ class ProductsController < ApplicationController
   end
 
   def not_public_offers
-    if Rails.env == "production"
-      @products = Product.where("public = false")
-    else
       @products = Product.where("public = false")
     end
   end
