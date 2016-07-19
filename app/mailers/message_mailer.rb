@@ -7,4 +7,10 @@ class MessageMailer < ApplicationMailer
         :to => '2bjswebdev@gmail.com',
         :subject => "A new contact form message from #{name} #{surname}")
   end
+
+  def welcome
+    @appname = "Bike Berlin"
+    mail(:to => user.email,
+        :subject => "Welcome to #{appname}!")
+  end
 end
