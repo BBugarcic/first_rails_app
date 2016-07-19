@@ -3,7 +3,9 @@ class MessageMailerPreview < ActionMailer::Preview
     MessageMailer.contact_form("john@example.com", "John", "Deer", "Hop!")
   end
 
-  def mail_template
-
+  def welcome
+    user = User.new
+    user.email = "b@g.com"
+    MessageMailer.welcome(user)
   end
 end
