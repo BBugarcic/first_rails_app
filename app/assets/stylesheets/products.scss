@@ -88,7 +88,13 @@
   width: 100%;
   overflow: hidden;
 }
-
+.product-name,
+.price {
+  display: inline-block;
+}
+.product-name {
+  width: 80%;
+}
 .thin-bottom {
   border-bottom: $thin_border;
 }

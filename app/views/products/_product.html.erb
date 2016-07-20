@@ -4,7 +4,15 @@
     <div class="product-img-wrapper">
       <%= image_tag(product.image_url, class: "pics") %>
     </div>
-    <h4 class="thin-bottom"><%= product.name %></h4>
+    <div class="thin-bottom">
+      <div class="product-name">
+        <h4 class=""><%= product.name %></h4>
+      </div>
+      <div class="price">
+        <span class="smaller"><%= product.price %> &euro;</span>
+      </div>
+    </div>
+
     <!--<p>Description: <%#= product.description %><p>
     <p>Color: <%#= product.color %></p>
     <p>Price: <%#= product.price %> &euro;</p>
