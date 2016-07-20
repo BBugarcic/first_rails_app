@@ -12,8 +12,8 @@
   padding-top: 100px;
 }
 .special-offer-wrapper {
-  width: 80%;
-  @extend %center_auto_margin;
+  width: 100%;
+  /*@extend %center_auto_margin;*/
   .offer-title-wrapper {
     text-align: center;
     text-transform: capitalize;
@@ -30,7 +30,7 @@
 
 .carousel-inner {
   .item {
-    height: 250px;
+    height: 300px;
     width: 100%;
     img {
     height: 100%;
@@ -109,11 +109,13 @@
 .row.is-flex {
   display: flex;
   flex-wrap: wrap;
-  /*margin-left: 0px;
-  margin-right: 0px;*/
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .row.is-flex > [class*='col-'] {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+
 }
