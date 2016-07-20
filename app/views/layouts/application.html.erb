@@ -52,8 +52,8 @@
                   <ul class="dropdown-menu">
                     <li><%= link_to "my account", "/users/#{current_user.id}" %></li>
                     <li><%= link_to "new offer", new_product_path %></li>
-                    <li><%= link_to "our products", products_our_offers_path %></li>
-                    <li><%= link_to "user's products", products_user_offers_path %></li>
+                    <li><%= link_to "Our offers", products_our_offers_path %></li>
+                    <li><%= link_to "Members' Offers", products_user_offers_path %></li>
                     <li><%= link_to "not public", products_not_public_offers_path %></li>
                     <li><%= link_to("Logout", destroy_user_session_path, :method => :delete) %></li>
                   </ul>
@@ -64,7 +64,7 @@
                   <ul class="dropdown-menu">
                     <li><%= link_to "my account", "/users/#{current_user.id}" %></li>
                     <li><%= link_to "new offer", new_product_path %></li>
-                    <li><%= link_to "my products", products_user_offers_path %></li>
+                    <li><%= link_to "my offers", products_user_offers_path %></li>
                     <li><%= link_to("Logout", destroy_user_session_path, :method => :delete) %></li>
                   </ul>
                 </li>

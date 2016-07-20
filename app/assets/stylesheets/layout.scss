@@ -131,6 +131,7 @@ body {
   text-transform: capitalize;
   &:hover {
     @extend %previous_change_background;
+    text-decoration: none;
   }
 }
 
@@ -138,6 +139,7 @@ body {
 .page-title {
   padding-top: 80px;
   margin-bottom: 30px;
+  text-transform: capitalize;
 }
 .center-title {
   position: absolute;

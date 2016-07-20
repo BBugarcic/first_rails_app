@@ -1,8 +1,10 @@
 <h1 class="page-title">Editing Product</h1>
 
-<div class="edit-project-form">
-  <%= render 'form' %>
-</div>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <%= render 'form' %>
 
-<%= link_to 'Show', @product, class: "scaffolded-link" %>
-<%= link_to 'Back', products_path, class: "scaffolded-link" %>
+    <%= link_to 'Show', @product, class: "scaffolded-link" %> |
+    <%= link_to 'Back', request.referer.present? ? request.referer : static_pages_index_path, class: "scaffolded-link" %>
+  </div>
+</div>

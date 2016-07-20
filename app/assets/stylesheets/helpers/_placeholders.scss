@@ -54,3 +54,9 @@
   margin-top: 80px;
   @extend %index-bg;
 }
+
+%scale-product {
+  &:hover {
+    transform: scale(1.1, 1.1);
+  }
+}

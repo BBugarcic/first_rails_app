@@ -1,7 +1,23 @@
-<div class="container">
-  <div class="row is-flex">
-    <!-- renders _product.html.erb for each product -->
-    <%= render @products %>
-
-  </div> <!-- /row -->
-</div><!-- /container -->
+<% if current_user.admin? %>
+  <h1 class="page-title">Member's Offers</h1>
+<% else %>
+  <h1 class="page-title">Your Products</h1>
+<% end %>
+<%= render "shared/separator" %>
+<%= render "shared/alert" %>
+<% if @products.empty? %>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <p>Currently you have no offers. Would you like to make one right now?</p>
+      <%= link_to 'New Offer', new_product_path, class: "scaffolded-link white" %> |
+      <%= link_to 'Back', request.referer.present? ? request.referer : static_pages_index_path, class: "scaffolded-link white" %>
+    </div>
+  </div>
+<% else %>
+  <div class="container">
+    <div class="row is-flex">
+      <!-- renders _product.html.erb for each product -->
+      <%= render @products %>
+    </div> <!-- /row -->
+  </div><!-- /container -->
+<% end %>

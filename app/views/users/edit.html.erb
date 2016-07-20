@@ -1,6 +1,11 @@
-<h1>Editing User</h1>
+<h1 class="page-title">Edit Account Information</h1>
+<%= render "shared/separator" %>
+<div class="panel panel-default">
+  <div class="panel-body">
 
-<%= render 'form' %>
+    <%= render 'form' %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+    <%= link_to 'Show', @user, class: "scaffolded-link white" %> |
+    <%= link_to 'Back', @user, class: "scaffolded-link white" %>
+  </div><!-- panel-body -->
+</div><!-- panel -->

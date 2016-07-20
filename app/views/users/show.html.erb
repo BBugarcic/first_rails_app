@@ -1,20 +1,25 @@
-<p id="notice"><%= notice %></p>
-<h1 class="page-title">user</h1>
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+<h1 class="page-title">Account Information</h1>
+<%= render "shared/alert" %>
+<%= render "shared/separator" %>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <p>
+      <strong>First name:</strong>
+      <%= @user.first_name %>
+    </p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+    <p>
+      <strong>Last name:</strong>
+      <%= @user.last_name %>
+    </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+    <p>
+      <strong>Email:</strong>
+      <%= @user.email %>
+    </p>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+    <%= link_to 'Edit', edit_user_path(@user), class: "scaffolded-link white" %> |
+    <%= link_to 'Back', request.referer.present? ? request.referer : static_pages_index_path, class: "scaffolded-link white" %>
+  </div><!-- panel-body -->
+</div><!-- panel -->
