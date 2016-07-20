@@ -1,10 +1,12 @@
 <h1 class="page-title">New Offer</h1>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-body">
 
-<div class="panel panel-default">
-  <div class="panel-body">
-    <%= render 'form' %>
+      <%= render 'form' %>
 
-    <%= link_to 'Show', @product, class: "scaffolded-link" %> |
-    <%= link_to 'Back', request.referer.present? ? request.referer : static_pages_index_path, class: "scaffolded-link" %>
+      <%= link_to 'Show', @product, class: "scaffolded-link" %> |
+      <%= link_to 'Back', request.referer.present? ? request.referer : static_pages_index_path, class: "scaffolded-link" %>
+    </div>
   </div>
 </div>

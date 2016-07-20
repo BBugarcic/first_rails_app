@@ -1,26 +1,16 @@
   <%= form_for(@product) do |f| %>
-  <% if @product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
-
-      <ul>
-      <% @product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= render "errors"%>
   <div class="form-group">
     <%= f.label :name %><br>
     <%= f.text_field :name, class: "form-control input-md", autofocus: true, placeholder: :name %><br>
   </div>
   <div class="form-group">
     <%= f.label :description %><br>
-    <%= f.text_area :description, class: "form-control input-md", autofocus: true, placeholder: :name %><br>
+    <%= f.text_area :description, class: "form-control input-md", autofocus: true, placeholder: :description %><br>
   </div>
   <div class="form-group">
     <%= f.label :image_url %><br>
-    <%= f.text_field :image_url, class: "form-control input-md", autofocus: true, placeholder: :description %><br>
+    <%= f.text_field :image_url, class: "form-control input-md", autofocus: true, placeholder: :image_url %><br>
   </div>
   <div class="form-group">
     <%= f.label :color %><br>
