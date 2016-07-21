@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
         @products = Product.where("public = 't'")
     end
 
-    @special_offers = Product.limit(5);
+    @special_offers = Product.special_offer
   end
 
   # GET /products/1
@@ -99,6 +99,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description, :image_url, :color, :price, :user_id, :public)
+      params.require(:product).permit(:name, :description, :image_url, :color, :price, :user_id, :public, :special_offer)
     end
 end

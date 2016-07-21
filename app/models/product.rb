@@ -8,6 +8,8 @@ class Product < ActiveRecord::Base
   has_many :orders
   has_many :comments
 
+  scope :special_offer, -> { where( special_offer: true ) }
+
   def average_rating
     comments.average(:rating).to_f
   end
