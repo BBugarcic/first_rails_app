@@ -1,0 +1,37 @@
+<div class="about-title-bg">
+  <div class="page-title-wrapper">
+    <div class="center-title">
+      <h1>Special Offers</h1>
+      <div class="hide-separator-on-small">
+        <%= render "shared/separator" %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <% @products.each do |special_offer| %>
+    <div class="row show-wrapper">
+        <div class="col-md-4 col-md-offset-1 col-sm-6 col-xs-12">
+          <%= image_tag(special_offer.image_url, class: "show-picture thumbnail img-responsive") %>
+        </div>
+        <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-1 col-xs-12">
+          <h3 class="show-title">
+            <%= special_offer.name %>
+          </h3>
+          <p><strong>Description:</strong>
+          <%= special_offer.description %>
+          <p><strong>Color:</strong>
+            <%= special_offer.color %></p>
+          <p>Average Rating: <div class="rated" data-score="<%= special_offer.average_rating %>"></div></p>
+          <p><strong>Price:</strong>
+            <%= special_offer.price %> &euro;</p>
+            <% if user_signed_in? && (special_offer.user_id == current_user.id || current_user.admin) %>
+              <%= link_to 'Edit', edit_product_path(special_offer), class: "scaffolded-link" %> |
+            <% end %>
+            <%= link_to 'Show', special_offer, class: "scaffolded-link" %> |
+            <%= link_to 'Back', request.referer.present? ? request.referer : static_pages_index_path, class: "scaffolded-link" %><br>
+            <%= render "shared/alert" %>
+        </div>
+    </div>
+  <% end %>
+</div>

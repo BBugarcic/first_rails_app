@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'products/special_offers'
+
   get 'products/our_offers'
 
   get 'products/not_public_offers'

@@ -91,6 +91,10 @@ class ProductsController < ApplicationController
       @products = Product.where("public = 'f'")
   end
 
+  def special_offers
+    @products = Product.special_offer
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
