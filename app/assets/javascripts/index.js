@@ -31,5 +31,5 @@ $(document).on('ready page:load', function(){
       }
     });
 
-        $(".alert").fadeOut(8000);
+    $(".alert").fadeOut(8000);
 });
