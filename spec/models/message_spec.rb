@@ -33,7 +33,7 @@ describe Message do
     it "is not valid email" do
       message.email = "this is not an email"
       expect(message).to_not be_valid
-    end
+    ends
 
     it "is without content" do
       message.content = nil
