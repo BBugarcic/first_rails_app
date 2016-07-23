@@ -2,7 +2,7 @@ class Product < ActiveRecord::Base
   validates :name, :description, :image_url, :color, presence: true
   validates :name, length: { in: 4..21 }
   validates :description, length: { in: 4..150 }
-  validates :price, numericality: { message: "must be a number" }
+  validates :price, numericality: { greater_than: 0, message: "must be a number greater than 0" }
   validates :image_url, :url => true
   belongs_to :user
   has_many :orders
