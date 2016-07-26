@@ -8,7 +8,25 @@ class Product < ActiveRecord::Base
   has_many :orders
   has_many :comments
 
-  scope :special_offer, -> { where( special_offer: true ) }
+  scope :special_offers, -> { where( special_offer: true ) }
+  scope :not_public_offers, -> { where( public: false ) }
+  scope :public_offers, -> { where( public: true ) }
+
+  def self.search(search_term, like)
+      where("name #{like} ?", "%#{search_term}%")
+  end
+
+  def self.admin_created
+    joins(:user).where( :users => {:admin => true} )
+  end
+
+  def self.current_user_created(current_id)
+    joins(:user).where("user_id = #{current_id}")
+  end
+
+  def self.members_created
+    joins(:user).where( :users => {:admin => false} )
+  end
 
   def average_rating
     comments.average(:rating).to_f

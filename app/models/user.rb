@@ -5,4 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :orders
   has_many :products
+
+#  scope :admin, -> { where( admin: true ) }
+#  scope :member, -> { where( "user_id = #{current_user.id}" ) }
+
 end

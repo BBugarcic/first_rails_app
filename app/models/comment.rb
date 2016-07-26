@@ -4,4 +4,11 @@ class Comment < ActiveRecord::Base
   validates :rating, numericality: { only_integer: true }
   belongs_to :user
   belongs_to :product
+
+  self.per_page = 3
+
+  def self.order_paginate(pages_param)
+    page(pages_param).order("created_at DESC")
+  end
+
 end

@@ -9,21 +9,23 @@ class ProductsController < ApplicationController
       search_term = params[:q]
       # return our filtered list here
       if Rails.env == "production"
-        @products = Product.where("name ilike ?", "%#{search_term}%")
+        like = "ilike"
+        @products = Product.search(search_term, like)
       else
-        @products = Product.where("name LIKE ?", "%#{search_term}%")
+        like = "LIKE"
+        @products = Product.search(search_term, like)
       end
     else
-        @products = Product.where("public = 't'")
+        @products = Product.where(public: true)
     end
 
-    @special_offers = Product.special_offer
+    @special_offers = Product.special_offers
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
-    @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
+    @comments = @product.comments.order_paginate(params[:page])
   end
 
   # GET /products/new
@@ -33,6 +35,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    authorize! :edit, @product
   end
 
   # POST /products
@@ -76,23 +79,23 @@ class ProductsController < ApplicationController
   end
 
   def user_offers
-      if (!current_user.admin?)
-        @products  = Product.where("user_id = #{current_user.id}")
-      else
-        @products = Product.joins(:user).where("admin = 'f'")
-      end
+    if(!current_user.admin?)
+      @products  = Product.current_user_created(current_user.id)
+    else
+      @products = Product.members_created
+    end
   end
 
   def our_offers
-    @products = Product.joins(:user).where("admin = 't'")
+    @products = Product.admin_created
   end
 
   def not_public_offers
-      @products = Product.where("public = 'f'")
+      @products = Product.not_public_offers
   end
 
   def special_offers
-    @products = Product.special_offer
+    @products = Product.special_offers
   end
 
   private
