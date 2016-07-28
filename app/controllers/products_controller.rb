@@ -8,13 +8,9 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       # return our filtered list here
-      if Rails.env == "production"
-        like = "ilike"
-        @products = Product.search(search_term, like)
-      else
-        like = "LIKE"
-        @products = Product.search(search_term, like)
-      end
+      like = (Rails.env == 'production') ? 'ilike' : 'LIKE'
+      @products = Product.search(search_term, like)
+
     else
         @products = Product.where(public: true)
     end
