@@ -40,6 +40,7 @@ class Ability
       can :manage, Product
       can :read, :destroy, User
       can :read, :destroy, Comment
+      can :our_offers, Product
     end
 
   end

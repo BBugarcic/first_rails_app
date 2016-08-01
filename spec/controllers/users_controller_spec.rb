@@ -3,8 +3,8 @@ require "rails_helper"
 describe UsersController, :type => :controller do
 
   describe "GET #show" do
-    let(:user) { User.create!(email: "some@email.com", password: "anything") }
-    let(:user2) { User.create!(email: "other@example.com", password: "otherone")}
+    let(:user) { FactoryGirl.create(:user) }
+    let(:user_2) { FactoryGirl.create(:user) }
 
     context "User is logged in" do
       before do
@@ -42,7 +42,7 @@ describe UsersController, :type => :controller do
       end
 
       it "not logged user routing" do
-        get :show, id: user2.id
+        get :show, id: user_2.id
         expect(response).to_not be_success
         expect(response).to have_http_status(302)
         expect(response).to redirect_to(products_path)
@@ -53,8 +53,8 @@ describe UsersController, :type => :controller do
   end
 
   describe "GET #edit" do
-    let(:user) { User.create!(email: "some@email.com", password: "anything") }
-    let(:user2) { User.create!(email: "other@example.com", password: "otherone")}
+    let(:user) { FactoryGirl.create(:user) }
+    let(:user_2) { FactoryGirl.create(:user) }
 
     context "User is logged in" do
       before do
@@ -88,7 +88,7 @@ describe UsersController, :type => :controller do
       end
 
       it "not logged user routing" do
-        get :edit, id: user2.id
+        get :edit, id: user_2.id
         expect(response).to_not be_success
         expect(response).to have_http_status(302)
         expect(response).to redirect_to(products_path)

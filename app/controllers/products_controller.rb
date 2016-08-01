@@ -9,10 +9,10 @@ class ProductsController < ApplicationController
       search_term = params[:q]
       # return our filtered list here
       like = (Rails.env == 'production') ? 'ilike' : 'LIKE'
-      @products = Product.search(search_term, like)
+      @products = Product.where(public: true).search(search_term, like)
 
     else
-        @products = Product.where(public: true)
+      @products = Product.where(public: true)
     end
 
     @special_offers = Product.special_offers
@@ -83,7 +83,11 @@ class ProductsController < ApplicationController
   end
 
   def our_offers
-    @products = Product.admin_created
+    if(!current_user.admin?)
+      redirect_to products_path
+    else
+      @products = Product.admin_created
+    end
   end
 
   def not_public_offers
