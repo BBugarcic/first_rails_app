@@ -24,6 +24,7 @@ class PaymentsController < ApplicationController
           :user_id => @user.id,
           :total => @product.price
         )
+        MessageMailer.paid_success(@user).deliver_now
       end
 
     rescue Stripe::CardError => e
