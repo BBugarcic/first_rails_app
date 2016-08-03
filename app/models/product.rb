@@ -31,8 +31,4 @@ class Product < ActiveRecord::Base
   def average_rating
     comments.average(:rating).to_f
   end
-
-  #def self.price(id)
-  #  select(:price).where(id)
-  #end
 end
