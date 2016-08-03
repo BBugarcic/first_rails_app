@@ -18,7 +18,11 @@
   </div>
   <div class="form-group">
     <%= f.label :price %><br>
-    <%= f.text_field :price, class: "form-control input-md", autofocus: true, placeholder: :price %><br>
+    <% if controller.controller_name == "products" && controller.action_name == "edit" %>
+      <%= f.text_field :price, class: "form-control input-md", autofocus: true, placeholder: :price, :value => f.object.price.to_f / 100 %><br>
+    <% else %>
+      <%= f.text_field :price, class: "form-control input-md", autofocus: true, placeholder: :price %><br>
+    <% end %>
   </div>
   <% if signed_in? && current_user.admin? %>
     <div class="form-group">

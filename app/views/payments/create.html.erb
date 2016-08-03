@@ -1,0 +1,12 @@
+<h1 class="page-title">Payment</h1>
+<%= render "shared/alert" %>
+<%= render "shared/separator" %>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <p>
+      Your payment was successful. Thank you for your purchase.
+    </p>
+
+    <%= link_to 'Back', request.referer.present? ? request.referer : static_pages_index_path, class: "scaffolded-link white" %>
+  </div><!-- panel-body -->
+</div><!-- panel -->

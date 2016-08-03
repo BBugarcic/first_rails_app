@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  post 'payments/create'
+
   get 'products/special_offers'
 
   get 'products/our_offers'

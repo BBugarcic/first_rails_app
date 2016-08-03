@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  #before_action :convert_price_in_cents, only: [:create, :update]
   # GET /products
   # GET /products.json
   def index
@@ -37,7 +37,8 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    @product = Product.new(product_params)
+    updated_params = convert_price_to_cent(product_params)
+    @product = Product.new(updated_params)
     @product.user_id = current_user.id
     respond_to do |format|
       if @product.save
@@ -53,8 +54,9 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
+    updated_params = convert_price_to_cent(product_params)
     respond_to do |format|
-      if @product.update(product_params)
+      if @product.update(updated_params)
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @product }
       else
@@ -99,6 +101,12 @@ class ProductsController < ApplicationController
   end
 
   private
+
+    def convert_price_to_cent(submitted_params)
+      submitted_params[:price] = submitted_params[:price].to_f * 100 #convert to cents
+      submitted_params
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.find(params[:id])
