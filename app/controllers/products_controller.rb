@@ -16,6 +16,9 @@ class ProductsController < ApplicationController
     end
 
     @special_offers = Product.special_offers
+    logger.debug "------------"
+    logger.debug "Current number of products in special_offers is #{@special_offers.size}"
+    logger.debug "------------"
   end
 
   # GET /products/1
@@ -54,6 +57,7 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
+    #byebug
     updated_params = convert_price_to_cent(product_params)
     respond_to do |format|
       if @product.update(updated_params)
@@ -79,6 +83,9 @@ class ProductsController < ApplicationController
   def user_offers
     if(!current_user.admin?)
       @products  = Product.current_user_created(current_user.id)
+    logger.debug "------------"
+    logger.debug "Current user has #{@products.size} products "
+    logger.debug "------------"
     else
       @products = Product.members_created
     end
@@ -89,11 +96,17 @@ class ProductsController < ApplicationController
       redirect_to products_path
     else
       @products = Product.admin_created
+    logger.debug "------------"
+    logger.debug "Admins have #{@products.size} products "
+    logger.debug "------------"
     end
   end
 
   def not_public_offers
       @products = Product.not_public_offers
+    logger.debug "------------"
+    logger.debug "Total number of pending offers is #{@products.size}"
+    logger.debug "------------"
   end
 
   def special_offers
