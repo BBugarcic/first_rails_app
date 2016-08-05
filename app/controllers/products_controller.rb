@@ -8,8 +8,7 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       # return our filtered list here
-      like = (Rails.env == 'production') ? 'ilike' : 'LIKE'
-      @products = Product.where(public: true).search(search_term, like)
+      @products = (Rails.env == 'production') ? Product.search_production(search_term) : Product.search_development(search_term)
 
     else
       @products = Product.where(public: true)
@@ -57,7 +56,6 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
-    #byebug
     updated_params = convert_price_to_cent(product_params)
     respond_to do |format|
       if @product.update(updated_params)

@@ -47,6 +47,9 @@ gem 'valid_url'
 # Use Stripe for feature-packed payments
 gem 'stripe'
 
+# Gem file Security scaner for Ruby on Rails
+gem "brakeman", :require => false
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

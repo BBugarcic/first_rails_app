@@ -12,8 +12,12 @@ class Product < ActiveRecord::Base
   scope :not_public_offers, -> { where( public: false ) }
   scope :public_offers, -> { where( public: true ) }
 
-  def self.search(search_term, like)
-      where("name #{like} ?", "%#{search_term}%")
+  def self.search_production(search_term)
+      where(public: true).where("name ilike ?", "%#{search_term}%")
+  end
+
+  def self.search_development(search_term)
+    where(public: true).where("name LIKE ?", "%#{search_term}%")
   end
 
   def self.admin_created
