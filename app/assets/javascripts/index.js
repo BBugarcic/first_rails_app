@@ -23,6 +23,7 @@ $(document).on('ready page:load', function(){
       //$("#error_explanation ul").css("list-style", "none");
     }
 
+    // comments
     $(".rating").raty( { path: "/assets", scoreName: "comment[rating]" });
     $(".rated").raty({ path: "/assets",
       readOnly: true,
@@ -32,4 +33,16 @@ $(document).on('ready page:load', function(){
     });
 
     $(".alert").fadeOut(8000);
+
+    // elevateZoom
+    $(".img-zoom").elevateZoom({
+      zoomWindowWidth: 350,
+      zoomWindowHeight: 300,
+      zoomWindowPosition: 6,
+			zoomWindowFadeIn: 500,
+			zoomWindowFadeOut: 500,
+			lensFadeIn: 500,
+			lensFadeOut: 500
+    });
+
 });
