@@ -58,7 +58,9 @@
   <div class="row">
     <%# byebug %>
     <!-- renders _product.html.erb for each product -->
-    <%= render @products %>
+    <% cache (cashe_key_for_products) do %>
+      <%= render @products %>
+    <% end %>
 
   </div> <!-- /row -->
 </div><!-- /container -->

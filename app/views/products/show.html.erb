@@ -4,18 +4,19 @@
       <%= image_tag(@product.image_url, class: "show-picture thumbnail img-responsive img-zoom", data_zoom_image: @product.image_url) %>
     </div>
     <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-1 col-xs-12">
-      <h3 class="show-title">
-        <%= @product.name %>
-      </h3>
-      <p><strong>Description:</strong>
-      <%= @product.description %>
-      <p><strong>Color:</strong>
-        <%= @product.color %></p>
-      <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
-      <p><strong>Price:</strong>
-        <%= @product.price.to_f / 100 %> &euro;
-
-      </p>
+      <% cache @product do %>
+        <h3 class="show-title">
+          <%= @product.name %>
+        </h3>
+        <p><strong>Description:</strong>
+        <%= @product.description %>
+        <p><strong>Color:</strong>
+          <%= @product.color %></p>
+        <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
+        <p><strong>Price:</strong>
+          <%= @product.price.to_f / 100 %> &euro;
+        </p>
+      <% end %>
       <% if user_signed_in? %>
         <%= form_tag "/payments/create" do %>
           <%= hidden_field_tag(:product_id, @product.id) %>

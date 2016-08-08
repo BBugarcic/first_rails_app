@@ -50,6 +50,9 @@ gem 'stripe'
 # Gem file Security scaner for Ruby on Rails
 gem "brakeman", :require => false
 
+# Gem file for accesing memcashed servers
+gem "dalli"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
