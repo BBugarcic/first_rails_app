@@ -1,25 +1,25 @@
 <div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-8 col-xs-offset-2 product-holder">
   <% cache product do %>
     <%= link_to product, class: "scaffolded-link white" do %>
-    <div class="product-wrapper">
-      <div class="product-img-wrapper">
-        <%= image_tag(product.image_url, class: "pics") %>
-      </div>
-      <div class="thin-bottom">
-        <div class="product-name">
-          <h4 class=""><%= product.name %></h4>
+      <div class="product-wrapper">
+        <div class="product-img-wrapper">
+          <%= image_tag(product.image_url, class: "pics") %>
         </div>
-        <div class="price">
-          <span class="smaller"><%= product.price.to_f / 100 %> &euro;</span>
+        <div class="thin-bottom">
+          <div class="product-name">
+            <h4 class=""><%= product.name %></h4>
+          </div>
+          <div class="price">
+            <span class="smaller"><%= product.price.to_f / 100 %> &euro;</span>
+          </div>
         </div>
-      </div>
 
-    <!--<p>Description: <%#= product.description %><p>
-    <p>Color: <%#= product.color %></p>
-    <p>Price: <%#= product.price %> &euro;</p>
-    <p class="scaffolded-link"><%#= link_to 'Edit', edit_product_path(product), class: "scaffolded-link white" %> <%= link_to 'Show', product, class: "scaffolded-link white" %></p>-->
-    <%#= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "scaffolded-link white" %>
-    </div>
+      <!--<p>Description: <%#= product.description %><p>
+      <p>Color: <%#= product.color %></p>
+      <p>Price: <%#= product.price %> &euro;</p>
+      <p class="scaffolded-link"><%#= link_to 'Edit', edit_product_path(product), class: "scaffolded-link white" %> <%= link_to 'Show', product, class: "scaffolded-link white" %></p>-->
+      <%#= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "scaffolded-link white" %>
+      </div>
     <% end %>
   <% end %>
 </div><!-- /col -->

@@ -53,6 +53,9 @@ gem "brakeman", :require => false
 # Gem file for accesing memcashed servers
 gem "dalli"
 
+# Redis
+gem 'redis-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

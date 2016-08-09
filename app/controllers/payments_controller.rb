@@ -25,6 +25,8 @@ class PaymentsController < ApplicationController
           :total => @product.price
         )
         MessageMailer.paid_success(@user).deliver_now
+
+        $redis.rpush("ordered_by_#{@user.id}:", "#{@product.id}")
       end
 
     rescue Stripe::CardError => e
