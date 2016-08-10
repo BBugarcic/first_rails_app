@@ -1,4 +1,4 @@
-if Rails.env.production?
+if Rails.env.production == "production"
   $redis = Redis.new(url: ENV["REDIS_URL"])
 else
   $redis = Redis.new(:host => 'localhost', :port => 6379)
