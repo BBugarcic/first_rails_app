@@ -24,7 +24,9 @@
             <%= ordered.color %></p>
           <p>Average Rating: <div class="rated" data-score="<%= ordered.average_rating %>"></div></p>
           <p><strong>Price:</strong>
-            <%= ordered.price / 100 %> &euro;</p>
+            <% @number_of_products = $redis.hget("ordered_by_#{current_user.id}:", "#{ordered.id}").to_i %>
+            <%= ordered.price / 100 * @number_of_products %> &euro;</p>
+          <p>Number of products: <%= @number_of_products %></p>
             <% if user_signed_in? && (ordered.user_id == current_user.id || current_user.admin) %>
               <%= link_to 'Edit', edit_product_path(ordered), class: "scaffolded-link" %> |
             <% end %>

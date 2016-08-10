@@ -5,8 +5,9 @@ class OrdersController < ApplicationController
   def index
     #@orders = Product.joins(:orders).where( :orders => {:user_id => "#{current_user.id}"})
 
-    @ordered_products_ids = $redis.lrange("ordered_by_#{current_user.id}:", 0, -1)
+    @ordered_products_ids = $redis.hkeys("ordered_by_#{current_user.id}:")
     @orders = Product.where( :id => @ordered_products_ids)
+
   end
 
   def show

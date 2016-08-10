@@ -26,7 +26,14 @@ class PaymentsController < ApplicationController
         )
         MessageMailer.paid_success(@user).deliver_now
 
-        $redis.rpush("ordered_by_#{@user.id}:", "#{@product.id}")
+        # check if user has already buy this product
+        if ($redis.hget("ordered_by_#{@user.id}:", "#{@product.id}"))
+          # count how many times he ordered the same product
+          $redis.hincrby("ordered_by_#{@user.id}:", "#{@product.id}", 1)
+        # if he orders the product for the first time
+        else
+          $redis.hset("ordered_by_#{@user.id}:", "#{@product.id}", 1)
+        end
       end
 
     rescue Stripe::CardError => e
