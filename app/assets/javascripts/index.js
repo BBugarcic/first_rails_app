@@ -14,7 +14,7 @@ var tStart = 100 // Start transition 100px from top
     });
 };
 
-$(document).on('ready page:load', function(){
+$(document).on('turbolinks:load', function(){
 
     $(document).scroll(function() {
         var p = ($(this).scrollTop() - tStart) / (tEnd - tStart); // % of transition
