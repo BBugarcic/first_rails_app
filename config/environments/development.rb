@@ -1,4 +1,8 @@
 Rails.application.configure do
+
+  # deactivate default cofeescript generation
+  config.app_generators.javascript_engine = :javascript
+  
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
