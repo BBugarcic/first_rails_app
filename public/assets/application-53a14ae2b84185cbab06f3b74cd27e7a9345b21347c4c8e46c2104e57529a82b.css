@@ -1,0 +1,992 @@
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  font-size: 2em;
+}
+
+@font-face {
+  font-family: "raty";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/raty.eot");
+  src: url("fonts/raty.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/raty.svg#raty") format("svg");
+  src: url("fonts/raty.ttf") format("truetype");
+  src: url("fonts/raty.woff") format("woff");
+}
+
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "raty";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+.cancel-on-png:before {
+  content: "\e600";
+}
+
+.cancel-off-png:before {
+  content: "\e601";
+}
+
+.star-on-png:before {
+  content: "\f005";
+}
+
+.star-off-png:before {
+  content: "\f006";
+}
+
+.star-half-png:before {
+  content: "\f123";
+}
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Candal);
+/* line 13, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/helpers/_placeholders.scss */
+.navbar, .navbar-default .navbar-nav > li > a, .dropdown-menu > li > a, .navbar-default .navbar-nav > li > form, .scaffolded-link {
+  font-family: 'Oswald', sans-serif;
+}
+
+/* line 17, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/helpers/_placeholders.scss */
+.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a, .scaffolded-link:hover {
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  transition: .5s;
+}
+
+/* line 27, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/helpers/_placeholders.scss */
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover {
+  color: #FFFFFF;
+}
+
+/* line 33, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/helpers/_placeholders.scss */
+.navbar-default .dropdown.open > a:focus, .dropdown-menu > li > a:focus, .navbar-default .dropdown.open > a:hover, .dropdown-menu > li > a:hover {
+  background-color: #990000;
+  color: #FFFFFF;
+}
+
+/* line 39, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/helpers/_placeholders.scss */
+.scaffolded-link:hover {
+  background-color: transparent;
+  color: #000000;
+}
+
+/* line 7, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* line 11, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 100px;
+  min-height: 100%;
+}
+
+/* Navbar */
+/* line 19, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.navbar {
+  min-height: 80px;
+  background-color: #990000;
+}
+
+/* line 24, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.navbar-default .navbar-toggle {
+  margin-top: 25px;
+  border-color: #000000;
+}
+/* line 27, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #990000;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 33, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+
+  /* line 36, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+
+  /* line 39, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+  .navbar-header .collapse, .navbar-toggle {
+    display: block !important;
+  }
+
+  /* line 42, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+  .navbar-header {
+    float: none;
+  }
+}
+/* line 47, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.navbar-default .navbar-collapse {
+  border-color: transparent;
+}
+
+/* line 50, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #000000;
+}
+
+/* line 54, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.navbar-default .navbar-brand {
+  margin-top: 15px;
+  color: #000000;
+  letter-spacing: 0.3em;
+}
+
+/* line 61, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.navbar-nav {
+  margin-top: 20px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* line 66, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.navbar-nav .lowercase {
+  text-transform: lowercase;
+}
+
+/* line 69, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.navbar-default .navbar-nav > li > a {
+  color: #000000;
+}
+
+/* line 79, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.dropdown-menu {
+  background-color: #990000;
+  border: none;
+}
+
+/* line 83, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.dropdown-menu > li > a {
+  color: #000000;
+}
+
+/* search */
+/* line 90, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.fixed {
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  z-index: 1000;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* line 99, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.search-and-previous-page-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 768px) {
+  /* line 99, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+  .search-and-previous-page-wrapper {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 768px) {
+  /* line 99, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+  .search-and-previous-page-wrapper {
+    justify-content: space-around;
+  }
+}
+
+/* line 111, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.navbar-default .navbar-nav > li > form {
+  padding-top: 10px;
+  color: #000000;
+}
+
+@media (max-width: 767px) {
+  /* line 117, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+  .mobile-hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* line 120, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+  .mobile-tablet-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 124, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+  .tablet-desktop-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  /* line 128, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+  .desktop-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 131, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+  .nav > li.tablet-desktop-hidden {
+    display: none;
+  }
+}
+
+/* line 135, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.search-tablet-desktop {
+  display: inline-block;
+}
+
+/*previous page*/
+/* line 140, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.previous-page {
+  display: inline-block;
+}
+
+/* line 144, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.scaffolded-link {
+  color: #333;
+  text-transform: capitalize;
+}
+/* line 148, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.scaffolded-link:hover {
+  text-decoration: none;
+}
+
+/*Page title*/
+/* line 155, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.page-title {
+  padding-top: 80px;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+/* line 160, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.center-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*separator div*/
+/* line 168, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.separator-wrapper {
+  position: relative;
+  text-align: center;
+}
+
+/* line 173, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.separator {
+  margin: 0 auto 1em;
+  width: 20em;
+}
+
+/* line 178, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.line-separator::before, .line-separator::after {
+  display: block;
+  width: 35%;
+  content: " ";
+  margin-top: 14px;
+  border: 1px solid #000000;
+}
+/* line 185, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.line-separator::before {
+  float: left;
+}
+/* line 188, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.line-separator::after {
+  float: right;
+}
+
+/* line 192, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.small-bike {
+  font-size: 1.5em;
+}
+
+/* line 196, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+.alert {
+  width: 40%;
+  display: block-inline;
+  padding: 10px;
+  margin: 0 auto 10px auto;
+}
+
+/*footer*/
+/* line 204, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/layout.scss */
+footer {
+  background-color: #990000;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  text-align: center;
+  padding-top: 10px;
+  width: 100%;
+}
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Candal);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+/* line 45, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/helpers/_placeholders.scss */
+.contact-title-bg {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* line 52, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/helpers/_placeholders.scss */
+.contact-title-bg {
+  height: 300px;
+  margin-top: 80px;
+}
+
+/* line 11, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/messages.scss */
+.contact-title-bg {
+  background-image: url("https://res.cloudinary.com/dnkyfvpgn/image/upload/v1468358693/adventure-925049_1920_lm9adg.jpg");
+}
+/* line 4, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/payments.scss */
+.stripe-button-el span {
+  background: #990000 !important;
+  background-image: -webkit-linear-gradient(top, #ad3232, #a31919, #990000) !important;
+  background: -moz-linear-gradient(top, #990000, #890000, #7a0000) !important;
+  background: linear-gradient(top, #990000, #890000, #7a0000) !important;
+  box-shadow: insent 0.3px 0.3px 0 rgba(255, 255, 255, 0.5);
+}
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Candal);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+/* line 9, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/helpers/_placeholders.scss */
+.special-offer-wrapper .offer-title-wrapper .btn-default, .product-wrapper {
+  margin: 0 auto;
+}
+
+/* line 13, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/helpers/_placeholders.scss */
+.special-offer-wrapper .offer-title-wrapper, .special-offer-wrapper .offer-title-wrapper .btn-default {
+  font-family: 'Oswald', sans-serif;
+}
+
+/* line 59, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/helpers/_placeholders.scss */
+.product-wrapper:hover {
+  transform: scale(1.1, 1.1);
+}
+
+/* line 11, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.page-title.title-down {
+  padding-top: 100px;
+}
+
+/* line 14, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.special-offer-wrapper {
+  width: 100%;
+  /*@extend %center_auto_margin;*/
+}
+/* line 17, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.special-offer-wrapper .offer-title-wrapper {
+  text-align: center;
+  text-transform: capitalize;
+}
+@media (min-width: 768px) {
+  /* line 17, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+  .special-offer-wrapper .offer-title-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 768px) {
+  /* line 17, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+  .special-offer-wrapper .offer-title-wrapper {
+    border: none;
+  }
+}
+@media (min-width: 768px) {
+  /* line 17, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+  .special-offer-wrapper .offer-title-wrapper {
+    border-top: solid 2px #990000;
+    border-bottom: solid 2px #990000;
+  }
+}
+/* line 23, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.special-offer-wrapper .offer-title-wrapper .btn-default {
+  text-transform: capitalize;
+}
+
+/* line 32, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.carousel-inner .item {
+  height: 300px;
+  width: 100%;
+}
+/* line 35, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.carousel-inner .item img {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 42, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.btn.btn-default.close-offer {
+  margin: 0 auto;
+}
+
+/* line 46, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.new-form,
+.edit-project-form {
+  text-align: center;
+}
+
+/* line 50, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.show-wrapper {
+  padding-top: 80px;
+  letter-spacing: 0.1em;
+  font-family: 'Roboto Slab', serif;
+}
+
+/* line 55, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.show-wrapper p {
+  line-height: 2em;
+}
+
+/* line 58, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.show-picture {
+  height: 400px;
+  width: 100%;
+}
+
+/* line 62, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.show-title {
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* line 66, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.product-reviews {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* line 70, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.product-holder {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 73, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.product-holder p {
+  font-family: 'Roboto Slab', serif;
+}
+
+/* line 78, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.product-wrapper {
+  width: 100%;
+  transition: 400ms;
+}
+
+/* line 85, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.product-img-wrapper {
+  text-align: center;
+  max-height: 220px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 91, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.product-name,
+.price {
+  display: inline-block;
+}
+
+/* line 95, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.product-name {
+  width: 80%;
+}
+
+/* line 98, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.thin-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* line 102, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.comment {
+  margin: 5px;
+}
+
+/* line 105, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.border {
+  border: solid;
+}
+
+/* line 109, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.pics {
+  height: 220px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* line 115, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.row.is-flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* line 122, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/products.scss */
+.row.is-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Candal);
+/*body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+  @extend %main_font_family;
+  text-transform: uppercase;
+
+  &:visited {
+    color: #000000;
+  }
+
+  &:hover {
+    color: #000000;
+    background-color: transparent;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}*/
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Candal);
+/* line 3, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/helpers/_placeholders.scss */
+.main-pic {
+  max-width: 100%;
+  max-height: 500px;
+  margin: 0 auto;
+}
+
+/* line 13, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/helpers/_placeholders.scss */
+h1, h2, h3, h4, .greeting,
+.greeting-left {
+  font-family: 'Oswald', sans-serif;
+}
+
+/* line 45, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/helpers/_placeholders.scss */
+.about-title-bg {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* line 52, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/helpers/_placeholders.scss */
+.about-title-bg {
+  height: 300px;
+  margin-top: 80px;
+}
+
+/*picture on home page*/
+/* line 14, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+.row {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* line 18, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+.left-column {
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 992px) {
+  /* line 18, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+  .left-column {
+    border: none;
+  }
+}
+@media (max-width: 460px) {
+  /* line 18, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+  .left-column {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 992px) {
+  /* line 22, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+  .middle-column {
+    border: none;
+  }
+}
+@media (max-width: 460px) {
+  /* line 22, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+  .middle-column {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* line 25, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+.right-column {
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 992px) {
+  /* line 25, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+  .right-column {
+    border: none;
+  }
+}
+@media (max-width: 460px) {
+  /* line 25, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+  .right-column {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* line 29, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+.panel-default {
+  width: 80%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  /* line 29, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+  .panel-default {
+    width: 60%;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 29, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+  .panel-default {
+    width: 40%;
+  }
+}
+
+/* line 39, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+.panel-body {
+  text-align: center;
+}
+
+/* line 43, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+.about-title-bg {
+  background-image: url("http://res.cloudinary.com/dnkyfvpgn/image/upload/c_scale,h_1080,w_1920/v1468330875/white-737190_1920_ifziax.jpg");
+}
+
+/* line 48, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+.index-bg {
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 100px;
+  background-image: url("https://res.cloudinary.com/dnkyfvpgn/image/upload/v1470913671/bike1_wx88wb.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 64, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+.index-bg-cover {
+  height: 100%;
+  width: 100%;
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
+  background: linear-gradient(top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
+}
+
+/* line 72, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+.index-mobile-bg {
+  margin-top: 80px;
+  position: relative;
+  height: 300px;
+  width: 100%;
+  background-image: url("bike1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 83, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+.page-title-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
+  background: linear-gradient(top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
+}
+
+/* line 92, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+.about-text {
+  text-align: justify;
+}
+/* line 94, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+.about-text p {
+  margin: 5px;
+}
+
+/* line 98, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+.shop-pic {
+  height: 250px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* line 103, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+.transparent-cover {
+  background-color: #FFFFFF;
+  opacity: 0.7;
+  width: 100%;
+  min-height: 100%;
+}
+
+/* line 109, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+.greeting {
+  text-align: left;
+}
+
+/* line 112, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+.greeting-left {
+  text-align: right;
+}
+
+/*Typography*/
+/* line 116, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+h1 {
+  text-align: center;
+  color: #000000;
+}
+
+/* line 122, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+h2 {
+  text-align: center;
+  color: #000000;
+}
+
+/* line 128, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+h3 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/* line 135, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+h4 {
+  color: #000000;
+}
+
+/* line 140, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+.smaller {
+  font-size: 0.8em;
+}
+
+/* line 144, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+.greeting,
+.greeting-left {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* line 149, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/static_pages.scss */
+.about-text {
+  font-family: 'Roboto Slab', serif;
+}
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Candal);
+/* line 13, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/helpers/_placeholders.scss */
+label, .btn.btn-lg.btn-block {
+  font-family: 'Oswald', sans-serif;
+}
+
+/* line 10, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/users.scss */
+.bg {
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 100px;
+  background-image: url("http://res.cloudinary.com/dnkyfvpgn/image/upload/c_scale,h_1080,w_1920/v1468330875/white-737190_1920_ifziax.jpg");
+  background-attachment: fixed;
+  backgroung-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-height: 669px) {
+  /* line 10, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/users.scss */
+  .bg {
+    position: absolute;
+  }
+}
+
+/* line 29, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/users.scss */
+.bg-cover {
+  height: 100%;
+  width: 100%;
+}
+@media (min-height: 669px) {
+  /* line 29, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/users.scss */
+  .bg-cover {
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
+    background: linear-gradient(top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
+  }
+}
+
+/* line 39, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/users.scss */
+.signin-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+  width: 70%;
+  background-color: #FFFFFF;
+  opacity: 0.9;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  /* line 50, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/users.scss */
+  .signin-wrapper {
+    width: 50%;
+  }
+}
+/* line 54, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/users.scss */
+.row.no-margin {
+  margin: 0;
+}
+
+/* line 57, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/users.scss */
+.signin-title {
+  padding-top: 10px;
+}
+
+@media (max-width: 460px) {
+  /* line 60, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/users.scss */
+  .hide-separator-on-small {
+    display: none;
+  }
+}
+
+/* line 64, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/users.scss */
+input[type="email"]
+input[type="password"] {
+  width: 100%;
+}
+
+/* line 69, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/users.scss */
+input[type="password"] {
+  margin-bottom: 10px;
+}
+
+/* line 73, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/users.scss */
+label {
+  letter-spacing: 0.2em;
+}
+
+/* line 78, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/users.scss */
+.btn.btn-lg.btn-block {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+/* line 85, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/users.scss */
+.form-control:focus {
+  border-color: #C16666;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(193, 102, 102, 0.6);
+}
+
+/* line 90, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/users.scss */
+.devise-shared {
+  padding-bottom: 30px;
+}
+
+/* line 94, /media/data/careerFoundry/ruby/firstRailsApp/firstApp/app/assets/stylesheets/users.scss */
+.devise-shared > a {
+  margin-left: 30px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
