@@ -1,9 +1,12 @@
 class Comment < ActiveRecord::Base
+  belongs_to :user
+  belongs_to :product
+
   validates :body, :user, :product, presence: true
   validates :body, length: { in: 4..100 }
   validates :rating, numericality: { only_integer: true }
-  belongs_to :user
-  belongs_to :product
+
+  after_create_commit { CommentUpdateJob.perform_later(self, @user) }
 
   self.per_page = 3
 

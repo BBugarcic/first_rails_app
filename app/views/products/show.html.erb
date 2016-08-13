@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row show-wrapper">
+  <div class="row show-wrapper" data-product-id="<%= @product.id %>">
     <div class="col-md-4 col-md-offset-1 col-sm-6 col-xs-12">
       <%= image_tag(@product.image_url, class: "show-picture thumbnail img-responsive img-zoom", data_zoom_image: @product.image_url) %>
     </div>
@@ -38,8 +38,12 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12 .product-reviews">
+    <div class="col-xs-12">
       <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
       <%= render "comments" %>
       <%= will_paginate @comments %>
     </div>
