@@ -4,14 +4,14 @@ var tStart = 100 // Start transition 100px from top
   , cEnd = [139, 139, 139]   // gray
   , cDiff = [cEnd[0] - cStart[0], cEnd[1] - cStart[1], cEnd[1] - cStart[0]];
 
-  var refreshRating = function() {
-    $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
-    $('.rated').raty({ path: '/assets',
-        readOnly: true,
-        score: function() {
-            return $(this).attr('data-score');
-        }
-    });
+var refreshRating = function() {
+  $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
+  $('.rated').raty({ path: '/assets',
+      readOnly: true,
+      score: function() {
+          return $(this).attr('data-score');
+      }
+  });
 };
 
 $(document).on('turbolinks:load', function(){
@@ -34,15 +34,6 @@ $(document).on('turbolinks:load', function(){
       $("#error_explanation h2").css("display", "none");
       //$("#error_explanation ul").css("list-style", "none");
     }
-
-    // comments
-    $(".rating").raty( { path: "/assets", scoreName: "comment[rating]" });
-    $(".rated").raty({ path: "/assets",
-      readOnly: true,
-      score: function(){
-        return $(this).attr("data-score");
-      }
-    });
 
     $(".alert").fadeOut(8000);
 
