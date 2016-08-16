@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     @user = request.env['warden'].user
     respond_to do |format|
-      Rails.logger.info(@comment.errors.inspect)
+      Rails.logger.debug(@comment.errors.inspect)
       if @comment.save
         #ActionCable.server.broadcast 'product_channel', comment: @comment
         format.html { redirect_to @product, notice: "Review was created successfully."}
