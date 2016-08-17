@@ -26,7 +26,7 @@ Streaming and Broadcasting is running on Heroku using Postgresql as Pub/Sub adap
 Payments system is implemented with [Stripe](https://stripe.com/ca) - payment processing service. Because this is only a demo application payments are configured to work in test mode on Heroku. For processing payments user of this application should use only [stripe's test numbers](https://stripe.com/docs/testing).
 
 ####Testing
-Unit and functional tests are done with RSpec and FactoryGirl gem is used for generating test data in functional tests.
+Unit and functional tests are done with RSpec. FactoryGirl gem is used for generating test data in functional tests.
 
 ####Security
 The latest version of [Brakeman](http://brakemanscanner.org/) is used to improve and check security of the app.
