@@ -1,7 +1,7 @@
 ## Bike Berlin
 
 This is a demo Ruby On Rails application I have build during CareerFoundry's course in Web Development. I build this project from scratch.
-This is a demo e-commerce website and the link to the application deployed on Heroku is [here](https://warm-journey-96233.herokuapp.com)
+This is a demo e-commerce website and the link to the application deployed on Heroku is [here](https://warm-journey-96233.herokuapp.com).
 
 ### Rails version
 At the beginning Bike Berlin was build in Ruby On Rails 4.2 but after the release of Rails 5.0, application is upgrated to new Rails version.
@@ -18,10 +18,6 @@ User can post a review for every individual product. Average review is displayed
 #### Notifications and ActionCable
 Since Rails 5 is released with brand new framework for handling WebSockets in Rails, posting comments and notifications are handled with ActionCable. Only signed in users get stream updates, and actual comments are displayed to all users who are streaming from a product channel. Only the comments on the specific product get streamed and not all of them!
 
-
-Only signed in users get stream updates
-Authenticate ActionCable connections and make sure only signed in users get to stream updates.
-Display the actual comments to all users who are streaming from a product channel. Make sure only the comments on the specific product get streamed and not all of them!
 Active job - framework for declaring jobs and making them run on a variety of queuing backends - is used for broadcasting comment in order to improve app's performance.
 
 Streaming and Broadcasting is running on Heroku using Postgresql as Pub/Sub adapter.
@@ -39,7 +35,7 @@ The latest version of [Brakeman](http://brakemanscanner.org/) is used to improve
 In order to demonstrate and learn about different ways of caching, in this application, data is cached using Russan Doll strategy, [Mamcached](http://memcached.org/) data story using [Dalli](https://github.com/petergoldstein/dalli), and [Redis](http://redis.io/).
 
 ####Monitoring
-[New Relic](https://newrelic.com/) is used like a tool for monitoring.
+[New Relic](https://newrelic.com/) is used as a monitoring tool.
 
 ####Running Bike Berlin on your localhost
 In order to run this project on your localhost you have to do the following
