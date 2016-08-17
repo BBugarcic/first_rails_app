@@ -1,4 +1,4 @@
-== Bike Berlin
+## Bike Berlin
 
 This is a demo Ruby On Rails application I have build during CareerFoundry's course in Web Development. I build this project from scratch.
 This is a demo e-commerce website and the link to the application deployed on Heroku is [here](https://warm-journey-96233.herokuapp.com)
